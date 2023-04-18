@@ -14,13 +14,13 @@
 
   export let output = [];
   export function convert() {
-      let dict = (!decodeInput ? toGermanikus : fromGermanikus)
-      output = []
-      for (const letter of userInput) {
-          output.push(
-              (letter in dict ? dict[letter] : letter)
-          );
-      }
+    let dict = (!decodeInput ? toGermanikus : fromGermanikus)
+    output = []
+    for (const letter of userInput) {
+      output.push(
+        (letter in dict ? dict[letter] : letter)
+      );
+    }
   };
 
   $: userInput, convert()
